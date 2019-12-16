@@ -1,4 +1,5 @@
 	global	_ft_tolower
+section	.text
 _ft_tolower:
 	lea		ecx, [rdi - 65]	; subtract 65 from current address and store it
 	lea		eax, [rdi + 32]	; add 32 to the current address and store it in return
