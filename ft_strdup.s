@@ -6,18 +6,18 @@
 section	.text	align=16
 _ft_strdup:
 	push	rbp
-	mov		rbp, 	rsp
-	mov		r13,		rdi
-	call	_ft_strlen
-	lea		rdi,	[rax + 1]
-	mov		r12,		rdi
-	call	_malloc
-	mov		rsi,	r13
-	mov		rcx,	r12
-	mov		rdi,	rax
-	cmp		rax,	0
-	je		the_end
-	rep		movsb
+	mov		rbp, 		rsp			;
+	mov		r13,		rdi			;
+	call	_ft_strlen				;
+	lea		rdi,		[rax + 1]	;
+	mov		r12,		rdi			;
+	call	_malloc					;
+	mov		rsi,		r13			;
+	mov		rcx,		r12			;
+	mov		rdi,		rax			;
+	cmp		rax,		0			;
+	je		the_end					;
+	rep		movsb					;
 the_end:
 	pop		rbp
 	ret
