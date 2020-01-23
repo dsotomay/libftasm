@@ -1,7 +1,7 @@
 	default	rel
 
 	global	_ft_strlen
-section .text
+section .text	align=16
 _ft_strlen:
 	; push	rbp				; save base pointer
 	; mov	rbp, rsp		; base pointer = stack pointer creating stack frame

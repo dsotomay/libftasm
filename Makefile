@@ -6,7 +6,7 @@
 #    By: dysotoma <dysotoma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 23:40:03 by dysotoma          #+#    #+#              #
-#    Updated: 2019/12/14 16:03:22 by dysotoma         ###   ########.fr        #
+#    Updated: 2020/01/23 05:05:18 by dysotoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,14 @@ SRC =	ft_tolower.s\
 		ft_toupper.s\
 		ft_isascii.s\
 		ft_isdigit.s\
+		ft_isalpha.s\
+		ft_isalnum.s\
 		ft_isprint.s\
 		ft_strdup.s\
-		ft_strlen.s
+		ft_strlen.s\
+		ft_memset.s\
+		ft_bzero.s\
+		ft_puts.s
 		
 OBJ	= $(SRC:%.s=%.o)
 
