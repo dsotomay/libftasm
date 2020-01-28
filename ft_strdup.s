@@ -12,9 +12,9 @@ _ft_strdup:
 	lea		rdi,		[rax + 1]	;
 	mov		r12,		rdi			;
 	call	_malloc					;
+	mov		rdi,		rax			;
 	mov		rsi,		r13			;
 	mov		rcx,		r12			;
-	mov		rdi,		rax			;
 	cmp		rax,		0			;
 	je		the_end					;
 	rep		movsb					;
