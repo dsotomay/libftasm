@@ -105,4 +105,19 @@ int main()
 
 	// int puts_val = ft_puts("hello\n");
 	printf("is the output of ft_puts(\"hello \") and returns %i\n\n", ft_puts("hello "));
+
+	/*
+	** ft_memcpy
+	*/
+
+	str = ft_memcpy(str, "hello ", 6);
+	printf("ft_memcpy(str, \"hello \", 6) = |%s|\n\n", str);
+
+	/*
+	** ft_strcat
+	*/
+
+	printf("before: ft_strlen(str) = %zu\n", ft_strlen(str));
+	printf("ft_strcat(str, \"world!\") = |%s|\n", ft_strcat(str, "world!"));
+	printf("after: ft_strlen(str) = %zu\n\n", ft_strlen(str));
 }

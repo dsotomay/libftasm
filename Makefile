@@ -6,7 +6,7 @@
 #    By: dysotoma <dysotoma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 23:40:03 by dysotoma          #+#    #+#              #
-#    Updated: 2020/01/23 15:22:21 by dysotoma         ###   ########.fr        #
+#    Updated: 2020/01/28 02:20:14 by dysotoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,10 @@ SRC =	ft_tolower.s\
 		ft_strdup.s\
 		ft_strlen.s\
 		ft_memset.s\
+		ft_memcpy.s\
 		ft_bzero.s\
-		ft_puts.s
+		ft_puts.s\
+		ft_strcat.s
 		
 OBJ	= $(SRC:%.s=%.o)
 
