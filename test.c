@@ -120,4 +120,5 @@ int main()
 	printf("before: ft_strlen(str) = %zu\n", ft_strlen(str));
 	printf("ft_strcat(str, \"world!\") = |%s|\n", ft_strcat(str, "world!"));
 	printf("after: ft_strlen(str) = %zu\n\n", ft_strlen(str));
+
 }

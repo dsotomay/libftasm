@@ -1,5 +1,10 @@
 	default	rel
 
 	global	_ft_cat
-section .text
+	extern	_write
+	extern	_read
+%ifndef 
+%define
+%endif
+section .text	align=16
 _ft_cat:

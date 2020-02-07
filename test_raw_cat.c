@@ -2,7 +2,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdio.h>
-#define MAXIMUM(a, b)	(((a) > (b)) ? (a) : (b))
+#include <unistd.h>
+#include <fcntl.h>
+#define MAX(a, b)	(((a) > (b)) ? (a) : (b))
 
 static void raw_cat(int rfd)
 {
@@ -14,8 +16,6 @@ static void raw_cat(int rfd)
 
 	wfd = fileno(stdout);
 	if (buf == NULL) {
-		if (fstat(wfd, &sbuf), 0)
-			return;
 		bsize = MAX(sbuf.st_blksize, 1024);
 		buf = malloc(bsize);
 		if (buf == NULL)
@@ -31,5 +31,10 @@ static void raw_cat(int rfd)
 
 int main(int ac, char  **av)
 {
-	
+	if (ac == 2)
+	{
+		int	fd = open(av[1], O_RDONLY);
+		raw_cat(fd);
+		close(fd);
+	}	
 }

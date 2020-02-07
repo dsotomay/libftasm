@@ -3,7 +3,7 @@
 	global	_ft_puts
 	extern	_write
 	extern	_ft_strlen
-section .text
+section .text align=16
 _ft_puts:
 	push	rbx			; set alignment and save rbx
 	mov 	rbx, rdi	; copy input string into rbx
