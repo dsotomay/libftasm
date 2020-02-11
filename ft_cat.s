@@ -13,4 +13,9 @@ _ft_cat:
 	push	rbx
 	mov		ebx, edi
 	sub		rsp, BUF
+	jmp		READ
+WRITE:
+READ:
 	
+	add		rsp, BUF
+	pop		rbx
