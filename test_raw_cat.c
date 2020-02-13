@@ -31,9 +31,9 @@ static void raw_cat(int rfd)
 
 int main(int ac, char  **av)
 {
-	if (ac == 2)
+	if (ac == 1)
 	{
-		int	fd = open(av[1], O_RDONLY);
+		int	fd = av[1] ? open(av[1], O_RDONLY) : 1;
 		raw_cat(fd);
 		close(fd);
 	}	

@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "libfts.h"
-int main()
+int main(int ac, char **av)
 {
 	/*
 	** ft_tolower
@@ -121,4 +123,13 @@ int main()
 	printf("ft_strcat(str, \"world!\") = |%s|\n", ft_strcat(str, "world!"));
 	printf("after: ft_strlen(str) = %zu\n\n", ft_strlen(str));
 
+	/*
+	** ft_cat
+	*/
+
+	if (ac == 1) {
+		int	fd = av[1] ? open(av[1], O_RDONLY) : 1;
+		ft_cat(fd);
+		close(fd);
+	}
 }

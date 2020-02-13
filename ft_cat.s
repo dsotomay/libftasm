@@ -15,7 +15,17 @@ _ft_cat:
 	sub		rsp, BUF
 	jmp		READ
 WRITE:
+	mov		rsi, rsp
+	mov		edi, 1
+	call	_write
 READ:
-	
+	mov		edx, BUF
+	mov		rsi, rsp
+	mov		edi, ebx
+	call	_read
+	mov		rdx, rax
+	test	rax, rax
+	jg		WRITE
 	add		rsp, BUF
 	pop		rbx
+	ret

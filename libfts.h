@@ -6,7 +6,7 @@
 /*   By: dysotoma <dysotoma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/15 16:53:04 by dysotoma          #+#    #+#             */
-/*   Updated: 2020/01/28 02:19:42 by dysotoma         ###   ########.fr       */
+/*   Updated: 2020/02/12 20:54:37 by dysotoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memcpy(void *dest, void *srce, size_t n);
 void	ft_bzero(void *s, size_t len);
 int		ft_puts(char *str);
 char	*ft_strcat(char *s1, char *s2);
+void	ft_cat(int fd);
 
 
 #endif
