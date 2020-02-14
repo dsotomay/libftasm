@@ -6,7 +6,7 @@
 #    By: dysotoma <dysotoma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 23:40:03 by dysotoma          #+#    #+#              #
-#    Updated: 2020/02/13 21:11:09 by dysotoma         ###   ########.fr        #
+#    Updated: 2020/02/13 21:14:35 by dysotoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ ARFLAGS = -cru
 RANLIB = ranlib
 
 NAME = libfts.a
-NAMELN = libft_malloc.so
 SRC =	ft_tolower.s\
 		ft_toupper.s\
 		ft_isascii.s\
