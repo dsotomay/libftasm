@@ -6,7 +6,7 @@
 #    By: dysotoma <dysotoma@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 23:40:03 by dysotoma          #+#    #+#              #
-#    Updated: 2020/02/12 20:52:54 by dysotoma         ###   ########.fr        #
+#    Updated: 2020/02/13 21:11:09 by dysotoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ RANLIB = ranlib
 
 NAME = libfts.a
 NAMELN = libft_malloc.so
-# FLAGS = -g -f macho64 -Wall -Wextra -Werror #-fsanitize=address
 SRC =	ft_tolower.s\
 		ft_toupper.s\
 		ft_isascii.s\
@@ -42,11 +41,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(ARFLAGS) $@ $?
 	$(RANLIB) $@
-# $(NAME): $(OBJ)
-# 	ar rcs $(NAME) $(OBJ)
-
-# $(OBJ):
-# 	nasm $(FLAGS) $(SRC)
 
 test: $(NAME)
 	$(CC) -g -Wall -Wextra -Werror $(OBJ) test.c
