@@ -27,6 +27,5 @@ end:
 	mov		rax, rbx
 	pop		rcx
 	pop		rbx
-	mov		rsp, rbp
 	pop		rbp
 	ret

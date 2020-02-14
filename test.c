@@ -127,9 +127,12 @@ int main(int ac, char **av)
 	** ft_cat
 	*/
 
-	if (ac == 1) {
+	printf("start of cat\n");
+	if (ac) {
 		int	fd = av[1] ? open(av[1], O_RDONLY) : 1;
+		fflush(stdin);
 		ft_cat(fd);
-		close(fd);
+		if (fd != 1)
+			close(fd);
 	}
 }

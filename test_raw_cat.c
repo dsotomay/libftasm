@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "libfts.h"
 #define MAX(a, b)	(((a) > (b)) ? (a) : (b))
 
 static void raw_cat(int rfd)
@@ -31,10 +32,12 @@ static void raw_cat(int rfd)
 
 int main(int ac, char  **av)
 {
-	if (ac == 1)
+	if (ac)
 	{
 		int	fd = av[1] ? open(av[1], O_RDONLY) : 1;
+		fflush(stdin);
 		raw_cat(fd);
-		close(fd);
+		if (fd != 1)
+			close(fd);
 	}	
 }
